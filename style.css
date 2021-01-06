@@ -1,0 +1,136 @@
+
+    body, h1, h2, h3, h4, h5, h6, p, ul, i {
+        font-family: Lato;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    header { margin-top: 50px; }
+
+    .score-panel { padding-top: 30px; }
+
+    #container { 
+        width: 20%;
+        margin: 0 auto;
+    }
+
+    header { flex: 1; }
+
+    h1 { text-align:  center; }
+
+    .score-panel { 
+        display: flex;
+        max-width: 680px;
+        margin: 0 auto;
+        padding-left: 15px;
+    }
+
+    .stars { flex: 1; }
+
+    .restart {
+        float: right;
+        padding-right: 15px;
+    }
+
+    section > ul {
+        display: flex;
+        list-style: none;
+    }
+
+    .deck {
+        display: flex;
+        max-width: 700px;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        perspective: 700px;
+        font-size: 200%;
+    }
+
+    .card {
+        display: flex;
+        margin-top: 25px;
+        background: #2f363d;
+        border: 2px solid #D3D3D3;
+        width: 150px;
+        height: 150px;
+        align-items: center;
+        transition: transform 1s, background 1.2s, border 0.2s;
+        transform-style: preserve-3d;
+        transform: rotateY(0deg);
+        cursor: pointer;
+    }
+
+    .card:hover { border: 2px solid #ABA8A8; }
+
+    .card > i {
+        transition-delay: 0.3s;
+        opacity: 0;
+    }
+
+    .card-flipped {
+        display: flex;
+        background: #d3d3d3;
+        border: 2px solid #d3d3d3;
+        margin-top: 25px;
+        width: 150px;
+        height: 150px;
+        align-items: center;
+        transition: transform 1s, background 1.6s;
+        transform-style: preserve-3d;
+        transform: rotateY(180deg);
+    }
+
+    .stars li { padding: 0 0 0 10px; }
+
+    /******************************/
+
+    @media only screen and (max-width: 480px) {
+        #container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .deck {
+            display: flex;
+            flex-flow: row-wrap;
+            margin: 10px 7%;
+        }
+
+        .card {
+            display: flex;
+            width: 72px;
+            height: 72px;
+            align-items: center;
+            transition: transform 1s, background 1.2s;
+            transform-style: preserve-3d;
+            transform: rotateY(0deg);
+        }
+
+        .card-flipped {
+            display: flex;
+            width: 72px;
+            height: 72px;
+            align-items: center;
+            transition: transform 1s, background 1.6s;
+            transform-style: preserve-3d;
+            transform: rotateY(180deg);
+        }
+    }
+
+    /***********************************/
+
+    @media only screen and (max-width: 320px) {
+        header { margin-top: 30px; }
+
+        .score-panel { padding-top: 10px; }
+
+        .card { 
+            width: 60px;
+            height: 60px;
+        }
+        
+        .card-flipped {
+            width: 60px;
+            height: 60px;
+        }
+    }
